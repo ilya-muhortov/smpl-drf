@@ -1,9 +1,14 @@
-from setuptools import setup, find_packages
+import setuptools
 from os.path import join, dirname
 
-setup(
-    name='smlp-drf',
-    version='0.1b',
-    packages=find_packages(),
-    long_description=open(join(dirname(__file__), 'README.rst')).read(),
+import smpl_drf
+
+setuptools.setup(
+    name='smpl-drf',
+    packages=setuptools.find_packages(),
+    version=smpl_drf.__version__,
+    license='MIT',
+    url='https://github.com/ilya-muhortov/smpl-drf',
+    long_description=open(join(dirname(__file__), 'README.md')).read(),
+    long_description_content_type="text/markdown"
 )
